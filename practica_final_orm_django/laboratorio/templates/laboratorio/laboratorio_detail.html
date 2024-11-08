@@ -1,0 +1,7 @@
+
+<h1>{{ object.nombre }}</h1>
+<p>Ciudad: {{ object.ciudad }}</p>
+<p>País: {{ object.pais }}</p>
+<a href="{% url 'laboratorio:laboratorio_edit' object.pk %}">Editar</a>
+<a href="{% url 'laboratorio:laboratorio_delete' object.pk %}">Eliminar</a>
+<a href="{% url 'laboratorio:laboratorio_list' %}">Volver a la lista</a>

@@ -1,0 +1,11 @@
+<h1>Lista de Laboratorios</h1>
+<a href="{% url 'laboratorio:laboratorio_create' %}">Agregar Nuevo Laboratorio</a>
+<ul>
+    {% for laboratorio in object_list %}
+        <li>
+            <a href="{% url 'laboratorio:laboratorio_detail' laboratorio.pk %}">{{ laboratorio.nombre }}</a>
+            <a href="{% url 'laboratorio:laboratorio_edit' laboratorio.pk %}">Editar</a>
+            <a href="{% url 'laboratorio:laboratorio_delete' laboratorio.pk %}">Eliminar</a>
+        </li>
+    {% endfor %}
+</ul>
